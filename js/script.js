@@ -34,35 +34,51 @@ setInterval(() => {
 
 }, 2500);
 
-const modal = document.getElementById("certificateModal");
-const modalImg = document.getElementById("modalImage");
-const certificateImages = document.querySelectorAll(".certificate-img");
-const closeBtn = document.querySelector(".close-btn");
 
-certificateImages.forEach(img => {
+const popup = document.getElementById("certificatePopup");
+const popupImage = document.getElementById("popupImage");
+const closePopup = document.getElementById("closePopup");
 
-    img.addEventListener("click", () => {
+function openCertificate(image){
 
-        modal.style.display = "flex";
+    console.log("Popup function called");
 
-        modalImg.src = img.src;
+    popup.style.display = "flex";
+    popupImage.src = image;
+}
 
-    });
+closePopup.onclick = function(){
 
-});
+    popup.style.display = "none";
 
-closeBtn.addEventListener("click", () => {
+}
 
-    modal.style.display = "none";
+popup.onclick = function(e){
 
-});
+    if(e.target === popup){
 
-modal.addEventListener("click", (e) => {
-
-    if(e.target === modal){
-
-        modal.style.display = "none";
+        popup.style.display = "none";
 
     }
+
+}
+
+
+/* ===========================
+   WELCOME SCREEN
+=========================== */
+
+const welcomeScreen = document.getElementById("welcomeScreen");
+const enterBtn = document.getElementById("enterPortfolio");
+
+enterBtn.addEventListener("click",()=>{
+
+    welcomeScreen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        welcomeScreen.style.display="none";
+
+    },700);
 
 });

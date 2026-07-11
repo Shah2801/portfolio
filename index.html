@@ -24,6 +24,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <body>
 
+    <!-- ===========================
+     WELCOME SCREEN
+=========================== -->
+
+<div id="welcomeScreen">
+
+    <div class="welcome-box">
+
+        <h1>👋 Welcome!</h1>
+
+        <h2>I'm Shahnaz Mullick</h2>
+
+        <p>
+            Thank you for visiting my portfolio.
+            Explore my professional journey, technical skills,
+            projects, certifications, and experience.
+        </p>
+
+        <button id="enterPortfolio">
+            View Portfolio
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</div>
+
 
 <nav>
 
@@ -35,12 +62,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
         <li><a href="index.html">Home</a></li>
 
-        <li><a href="skills.html">Skills</a></li>
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#experience">Experience</a></li>
 
         <li><a href="projects.html">Projects</a></li>
 
-        <li><a href="certifications.html">Certificates</a></li>
+        <li><a href="#certifications">Certifications</a></li>
 
+        <li><a href="#contact">Contact</a></li>
 
     </ul>
 
@@ -91,7 +123,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </section>
 
-<script src="js/script.js"></script>
 
 <!-- ABOUT -->
 
@@ -135,6 +166,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     </div>
 
 </section>
+
+<!-- SKILLS -->
+
+<section class="skills-hero" id="skills">
+
+    <div class="section-title">
+
+        <h2>Skills</h2>
+
+        <p>
+            Technologies, tools and platforms that I use to build,
+            support and maintain enterprise applications.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="certificate-btn">
+    <a href="skills.html" class="view-all-btn">
+        Let's grow together!
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
 
 
 <!-- EXPERIENCE -->
@@ -230,9 +286,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 </section>
 
 
-<!-- ==========================
+
+<!-- ===========================
      CERTIFICATIONS
-========================== -->
+=========================== -->
 
 <section class="certifications" id="certifications">
 
@@ -244,113 +301,66 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
         <!-- Certificate 1 -->
 
-        <div class="flip-card">
+        <div class="certificate-card">
 
-            <div class="flip-card-inner">
+           <img src="images/certificate-AI-900.jpg" alt="AI-900">
+            <div class="certificate-info">
 
-                <div class="flip-card-front">
+                <h3>Microsoft Azure AI Fundamentals (AI-900)</h3>
 
-                    <i class="fa-solid fa-award"></i>
+                <p>Microsoft</p>
 
-                    <h3>Microsoft Azure AI Fundamentals (AI-900)</h3>
+                <button onclick="openCertificate('images/certificate-AI-900.jpg')">
+                    Preview Certificate
+                </button>
 
-                    <p>Microsoft</p>
-
-                    <span>Hover to View Certificate</span>
-
-                </div>
-
-                
-            <div class="flip-card-back">
-
-                  <img src="images/certificate-AI-900.jpg"
-                   alt="AI-900 Certificate"
-                   class="certificate-img">
-
-            </div>
             </div>
 
         </div>
 
         <!-- Certificate 2 -->
 
-        <div class="flip-card">
 
-            <div class="flip-card-inner">
 
-                <div class="flip-card-front">
+        <div class="certificate-card">
 
-                    <i class="fa-solid fa-cloud"></i>
+            <img src="images/certificate-AWS cloud.jpg" alt="AWS">
 
-                    <h3>Introduction to Cloud Computing</h3>
+            <div class="certificate-info">
 
-                    <p>IBM</p>
+                <h3>AWS Cloud Practitioner Assessment</h3>
 
-                    <span>Hover to View Certificate</span>
+                <p>Learntube.ai</p>
 
-                </div>
-
-                <div class="flip-card-back">
-
-                    <img src="images/certificates/cloud.jpg" alt="Cloud Certificate">
-
-                </div>
+                <button onclick="openCertificate('images/certificate-AWS cloud.jpg')">
+                    Preview Certificate
+                </button>
 
             </div>
 
         </div>
+
+        
+
+
+
+        
 
         <!-- Certificate 3 -->
 
-        <div class="flip-card">
+        <div class="certificate-card">
 
-            <div class="flip-card-inner">
+            <img src="images/certificate-introduction cloud computing.jpg" alt="IBM">
 
-                <div class="flip-card-front">
+            <div class="certificate-info">
 
-                    <i class="fa-brands fa-aws"></i>
+                <h3>Introduction to Cloud Computing</h3>
 
-                    <h3>AWS Cloud Practitioner Assessment</h3>
+                <p>IBM</p>
 
-                    <p>Learntube.ai</p>
-
-                    <span>Hover to View Certificate</span>
-
-                </div>
-
-                <div class="flip-card-back">
-
-                    <img src="images/certificates/aws.jpg" alt="AWS Certificate">
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Certificate 4 -->
-
-        <div class="flip-card">
-
-            <div class="flip-card-inner">
-
-                <div class="flip-card-front">
-
-                    <i class="fa-solid fa-certificate"></i>
-
-                    <h3>Add Your Next Certificate</h3>
-
-                    <p>Future Achievement</p>
-
-                    <span>Coming Soon</span>
-
-                </div>
-
-                <div class="flip-card-back">
-
-                    <img src="images/certificates/default.jpg" alt="Certificate">
-
-                </div>
+                <button onclick="openCertificate('images/certificate-introduction cloud computing.jpg')">
+                    Preview Certificate
+                </button>
 
             </div>
 
@@ -358,8 +368,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
     </div>
 
-</section>
 
+    <div class="certificate-btn">
+    <a href="certificates.html" class="view-all-btn">
+        Explore All Achievements
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
+
+
+</section>
 
 
 
@@ -428,15 +446,65 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </section>
 
-<!-- Certificate Popup -->
 
-<div id="certificateModal" class="certificate-modal">
 
-    <span class="close-btn">&times;</span>
+<div id="certificatePopup">
 
-    <img id="modalImage" class="modal-content">
+    <span id="closePopup">&times;</span>
+
+    <img id="popupImage">
 
 </div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>SM.</h2>
+
+        <p>
+            Thank you for visiting my portfolio.
+            Let's connect and build something amazing together.
+        </p>
+
+        <div class="footer-social">
+
+            <a href="mailto:shahnazz2801@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/shahnaz-mullick-7532b7250" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/shah2801" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://instagram.com/shahnu_2101" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Shahnaz Mullick. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+
 
 
 </body>
