@@ -33,3 +33,36 @@ setInterval(() => {
     changingText.textContent = roles[index];
 
 }, 2500);
+
+const modal = document.getElementById("certificateModal");
+const modalImg = document.getElementById("modalImage");
+const certificateImages = document.querySelectorAll(".certificate-img");
+const closeBtn = document.querySelector(".close-btn");
+
+certificateImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        modal.style.display = "flex";
+
+        modalImg.src = img.src;
+
+    });
+
+});
+
+closeBtn.addEventListener("click", () => {
+
+    modal.style.display = "none";
+
+});
+
+modal.addEventListener("click", (e) => {
+
+    if(e.target === modal){
+
+        modal.style.display = "none";
+
+    }
+
+});

@@ -1174,3 +1174,262 @@ transform:translateY(0px);
     }
 
 }
+
+/* ===========================
+   CERTIFICATIONS
+=========================== */
+
+.certifications{
+    background:#111827;
+}
+
+.certificate-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+/* Flip Card */
+
+.flip-card{
+
+    background:transparent;
+
+    height:360px;
+
+    perspective:1200px;
+
+}
+
+.flip-card-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform .8s;
+
+    transform-style:preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.flip-card-front,
+.flip-card-back{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    backface-visibility:hidden;
+
+    overflow:hidden;
+
+}
+
+/* Front */
+
+.flip-card-front{
+
+    background:#1E293B;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    text-align:center;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+}
+
+.flip-card:hover .flip-card-front{
+
+    border-color:#38BDF8;
+
+}
+
+.flip-card-front i{
+
+    font-size:55px;
+
+    color:#38BDF8;
+
+    margin-bottom:20px;
+
+}
+
+.flip-card-front h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.flip-card-front p{
+
+    color:#94A3B8;
+
+    margin-bottom:20px;
+
+}
+
+.flip-card-front span{
+
+    color:#38BDF8;
+
+    font-size:14px;
+
+}
+
+/* Back */
+
+.flip-card-back{
+
+    background:#1E293B;
+
+    transform:rotateY(180deg);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flip-card-back img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* Hover */
+
+.flip-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .flip-card{
+
+        height:320px;
+
+    }
+
+}
+
+/* ===========================
+   CERTIFICATE POPUP
+=========================== */
+
+.certificate-modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.85);
+
+    backdrop-filter:blur(8px);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.modal-content{
+
+    max-width:85%;
+
+    max-height:90%;
+
+    border-radius:12px;
+
+    box-shadow:0 0 40px rgba(56,189,248,.4);
+
+    animation:zoomIn .3s ease;
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
