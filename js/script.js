@@ -68,8 +68,16 @@ popup.onclick = function(e){
    WELCOME SCREEN
 =========================== */
 
+
 const welcomeScreen = document.getElementById("welcomeScreen");
 const enterBtn = document.getElementById("enterPortfolio");
+
+// Show only on first visit
+if(localStorage.getItem("visited")){
+
+    welcomeScreen.style.display = "none";
+
+}
 
 enterBtn.addEventListener("click",()=>{
 
@@ -81,4 +89,35 @@ enterBtn.addEventListener("click",()=>{
 
     },700);
 
+    localStorage.setItem("visited","true");
+
+});
+
+
+
+// ===========================
+// Scroll Reveal
+// ===========================
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+reveals.forEach(section=>{
+    observer.observe(section);
 });
