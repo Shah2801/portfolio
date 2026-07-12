@@ -69,22 +69,26 @@ popup.onclick = function(e){
 =========================== */
 
 
-const welcomeScreen = document.getElementById("welcomeScreen");
-const enterBtn = document.getElementById("enterPortfolio");
+const welcomeOverlay = document.getElementById("welcomeScreen");
+const continueBtn = document.getElementById("continueBtn");
 
-enterBtn.addEventListener("click",()=>{
+if (welcomeOverlay) {
 
-    welcomeScreen.style.opacity="0";
+    const urlParams = new URLSearchParams(window.location.search);
+    const skipWelcome = urlParams.get("skipWelcome");
 
-    setTimeout(()=>{
+    if (skipWelcome === "true") {
+        welcomeOverlay.style.display = "none";
+    } else {
+        welcomeOverlay.style.display = "flex";
+    }
 
-        welcomeScreen.style.display="none";
-
-    },700);
-
-});
-
-
+    if (continueBtn) {
+        continueBtn.addEventListener("click", () => {
+            welcomeOverlay.style.display = "none";
+        });
+    }
+}
 
 // ===========================
 // Scroll Reveal
