@@ -72,13 +72,6 @@ popup.onclick = function(e){
 const welcomeScreen = document.getElementById("welcomeScreen");
 const enterBtn = document.getElementById("enterPortfolio");
 
-// Show only on first visit
-if(localStorage.getItem("visited")){
-
-    welcomeScreen.style.display = "none";
-
-}
-
 enterBtn.addEventListener("click",()=>{
 
     welcomeScreen.style.opacity="0";
@@ -88,8 +81,6 @@ enterBtn.addEventListener("click",()=>{
         welcomeScreen.style.display="none";
 
     },700);
-
-    localStorage.setItem("visited","true");
 
 });
 
